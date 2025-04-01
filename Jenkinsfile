@@ -1,5 +1,5 @@
 pipeline {
-    agent { lable 'Jenkins_Agnet' }
+    agent { label 'Jenkins_Agnet' }
     tools {
         jdk 'Java17'
         maven 'Maven3'
@@ -13,7 +13,7 @@ pipeline {
     
             stage("Checkout from SCM") {
                   steps {
-                    git branch: 'main', CredentialsId: 'github', url: 'https://github.com/Surendardev08/simple-reactjs-app'
+                    git branch: 'main', credentialsId: 'github', url: 'https://github.com/Surendardev08/simple-reactjs-app'
                   }
             }
     
